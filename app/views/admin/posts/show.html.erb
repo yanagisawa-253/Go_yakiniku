@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-2 mx-auto">
+      <h2>お肉詳細</h2>
+      <table class="table table-borderless">
+        <tbody>
+          <tr>
+            <td><= attachment_image_tag @post, :image, :fill, 250, 200 %></td>
+            <td>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td>部位名</td>
+                  <td><%= @post.post_name %></td>
+                </tr>
+                <tr>
+                  <td>説明</td>
+                  <td><%= @post.post_introduction %></td>
+                </tr>
+                <tr>
+                  <td>国内最高額</td>
+                  <td><%= @post.max_price %></td>
+                </tr>
+                <tr>
+                  <td>国内最低額</td>
+                  <td><%= @post.min_price %>円</td>
+                </tr>
+                <tr>
+                  <td>平均価格</td>
+                  <td><%= @post.price %></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td><%= link_to '編集する', edit_admin_post_path(@post), class: "btn btn-success" %></td>
+                </tr>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
