@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <!--一覧のbox-->
+    <div class="post-box col-sm-10">
+      <div class="">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>部位名</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <%= @posts.each do |post| %>
+          <tr>
+            <td><%= post.post_name %></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>

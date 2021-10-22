@@ -1,0 +1,53 @@
+<% if @post.errors.any? %>
+  <%= @post.errors.count %>件のエラーが発生しました
+  <% @post.errors.full_messages.each do |message| %>
+    <%= message %>
+  <% end %>
+<% end %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-lg-5 px-sm-0 mx-auto">
+      <h2 class="pb-3">商品編集</h2>
+      <%= form_with model: [:admin, @post], local:true do |f| %>
+        <div class="form-group row">
+          <label for="item_image" class="col-sm-4 col-form-label">画像</label>
+          <div class="col-sm-8">
+            <= f.attachment_field :image %>
+          </div>
+        </div>
+        <div class= "form-group row">
+          <label for="name" class="col-sm-3 col-form-label">部位名</label>
+          <div class="col-sm-9">
+            <%= f.text_field :post_name %>
+          </div>
+        </div>
+        <div class= "form-group row">
+          <label for="introduction" class="col-sm-3 col-form-label">説明</lable>
+          <div class="col-sm-12">
+            <%= f.text_area :post_introduction, :size => "50" %>
+          </div>
+        </div>
+        <div class= "form-group row">
+          <label for="genre" class="col-sm-3 col-form-label">国内最高額</label>
+          <div class="col-sm-9">
+            <%= f.text_field :max_price %> 円
+          </div>
+        </div>
+        <div class= "form-group row">
+          <label for="genre" class="col-sm-3 col-form-label">国内最低額</label>
+          <div class="col-sm-9">
+            <%= f.text_field :min_price %> 円
+          </div>
+        </div>
+        <div class= "form-group row">
+          <label for="genre" class="col-sm-3 col-form-label">平均価格</label>
+          <div class="col-sm-9">
+            <%= f.text_field :price %> 円
+          </div>
+        </div>
+        <button type="submit" class="btn btn-success mx-auto">新規登録</button>
+      <% end %>
+    </div>
+  </div>
+</div>
