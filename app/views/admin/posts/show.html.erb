@@ -5,7 +5,7 @@
       <table class="table table-borderless">
         <tbody>
           <tr>
-            <td><= attachment_image_tag @post, :image, :fill, 250, 200 %></td>
+            <td><%= attachment_image_tag @post, :image, :fill, 250, 200 %></td>
             <td>
             <table class="table">
               <tbody>
@@ -15,18 +15,18 @@
                 </tr>
                 <tr>
                   <td>説明</td>
-                  <td><%= @post.post_introduction %></td>
+                  <td><%= @post.post_introdction %></td>
                 </tr>
                 <tr>
-                  <td>国内最高額</td>
+                  <td>松坂牛</td>
                   <td><%= @post.max_price %></td>
                 </tr>
                 <tr>
-                  <td>国内最低額</td>
+                  <td>牛角</td>
                   <td><%= @post.min_price %>円</td>
                 </tr>
                 <tr>
-                  <td>平均価格</td>
+                  <td>スーパー</td>
                   <td><%= @post.price %></td>
                 </tr>
                 <tr>

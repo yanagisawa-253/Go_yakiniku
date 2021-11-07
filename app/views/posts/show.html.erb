@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <div class="post-item col-sm-12" >
+      <table class="table table-borderless">
+        <tbody>
+          <tr>
+            <th><%= attachment_image_tag @post, :image, :fill, 250, 200 %></th>
+            <th>
+              <table class="table table-borderless">
+                <tbody>
+                  <tr>
+                    <th><%= @post.post_name %></th>
+                  </tr>
+                  <tr>
+                    <td><%= @post.post_introdction %></td>
+                  </tr>
+                  <tr>
+                    <td>松坂牛　<%= @post.max_price %>円</td>
+                  </tr>
+                  <tr>
+                    <td>牛角　<%= @post.min_price %>円</td>
+                  </tr>
+                  <tr>
+                    <td>スーパー　<%= @post.price %>円</td>
+                  </tr>
+                  </tr>
+                </tbody>
+              </table>
+            </th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
