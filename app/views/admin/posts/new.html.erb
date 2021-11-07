@@ -6,7 +6,7 @@
         <div class= "form-group row">
           <label for="image" class="col-sm-3 col-form-label">画像</label>
           <div class="col-sm-9">
-            <= f.attachment_field :image %>
+            <%= f.attachment_field :image %>
           </div>
         </div>
         <div class= "form-group row">
@@ -16,25 +16,25 @@
           </div>
         </div>
         <div class= "form-group row">
-          <label for="introduction" class="col-sm-3 col-form-label">説明</lable>
+          <label for="introduction" class="col-sm-4 col-form-label">説明</lable>
           <div class="col-sm-12">
             <%= f.text_area :post_introdction, :size => "50" %>
           </div>
         </div>
         <div class= "form-group row">
-          <label for="genre" class="col-sm-3 col-form-label">松坂牛</label>
+          <label for="genre" class="col-sm-4 col-form-label">松坂牛</label>
           <div class="col-sm-9">
             <%= f.text_field :max_price %> 円
           </div>
         </div>
         <div class= "form-group row">
-          <label for="genre" class="col-sm-3 col-form-label">牛角</label>
+          <label for="genre" class="col-sm-4 col-form-label">牛角</label>
           <div class="col-sm-9">
             <%= f.text_field :min_price %> 円
           </div>
         </div>
         <div class= "form-group row">
-          <label for="genre" class="col-sm-3 col-form-label">スーパー</label>
+          <label for="genre" class="col-sm-4 col-form-label">スーパー</label>
           <div class="col-sm-9">
             <%= f.text_field :price %> 円
           </div>
