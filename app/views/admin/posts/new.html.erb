@@ -4,9 +4,9 @@
       <h2 class="mb-3">お肉の登録を行う</h2>
       <%= form_with model: [ :admin, @post], local:true do |f| %>
         <div class= "form-group row">
-          <label for="image" class="col-sm-4 col-form-label">画像</label>
-          <div class="col-sm-8">
-            <= f.attachment_field :image %>
+          <label for="image" class="col-sm-3 col-form-label">画像</label>
+          <div class="col-sm-9">
+            <%= f.attachment_field :image %>
           </div>
         </div>
         <div class= "form-group row">
@@ -17,25 +17,25 @@
         </div>
         <div class= "form-group row">
           <label for="introduction" class="col-sm-4 col-form-label">説明</lable>
-          <div class="col-sm-8">
-            <%= f.text_area :post_introduction, :size => "50" %>
+          <div class="col-sm-12">
+            <%= f.text_area :post_introdction, :size => "50" %>
           </div>
         </div>
         <div class= "form-group row">
-          <label for="genre" class="col-sm-4 col-form-label">松坂(100g)牛</label>
-          <div class="col-sm-8">
+          <label for="genre" class="col-sm-4 col-form-label">松坂牛</label>
+          <div class="col-sm-9">
             <%= f.text_field :max_price %> 円
           </div>
         </div>
         <div class= "form-group row">
-          <label for="genre" class="col-sm-4 col-form-label">牛角(1人前)</label>
-          <div class="col-sm-8">
+          <label for="genre" class="col-sm-4 col-form-label">牛角</label>
+          <div class="col-sm-9">
             <%= f.text_field :min_price %> 円
           </div>
         </div>
         <div class= "form-group row">
           <label for="genre" class="col-sm-4 col-form-label">スーパー(100g)</label>
-          <div class="col-sm-8">
+          <div class="col-sm-9">
             <%= f.text_field :price %> 円
           </div>
         </div>
