@@ -14,7 +14,7 @@ class Admin::PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.save
-    redirect_to posts_path
+    redirect_to admin_posts_path
   end
 
   def edit
@@ -36,6 +36,6 @@ class Admin::PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post)..permit(:post_name, :post_introdction, :max_price, :min_price, :price)
+    params.require(:post).permit(:post_name, :post_introdction, :max_price, :min_price, :price)
   end
 end
