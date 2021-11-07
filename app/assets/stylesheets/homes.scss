@@ -1,3 +1,22 @@
 // Place all the styles related to the homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.top-image {
+  // 画像をセンターに寄せるための命令
+  text-align: center;
+}
+
+.img-fluid {
+  width: auto;
+  height: 300px;
+  background-size: 100% auto;
+  background-position: center;
+  padding: 5px;
+  border: 5px solid orangered;
+}
+
+.top-string {
+  font-size: 40px;
+  color: #A52A2A;
+}
