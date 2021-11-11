@@ -23,10 +23,10 @@
             <ul class="navbar-nav ml-auto">
             <% if admin_signed_in? %>
             <li class="nav-item">
-              <%= link_to "ログアウト", destroy_admin_session_path, method: :delete, class: 'nav-link text-light' %>
+              <%= link_to '一覧表示', admin_posts_path, class: 'nav-link text-light' %>
             </li>
             <li class="nav-item">
-              <%= link_to '一覧表示', admin_posts_path, class: 'nav-link text-light' %>
+              <%= link_to "ログアウト", destroy_admin_session_path, method: :delete, class: 'nav-link text-light' %>
             </li>
             <% else %>
             <li class="nav-item">
