@@ -1,42 +1,39 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-8 offset-2 mx-auto">
-      <h2>お肉詳細</h2>
-      <table class="table table-borderless">
+    <div class="post-item col-sm-12">
+      <h2 class="mt-3">お肉詳細</h2>
+      <table class="table table-borderless mt-5">
         <tbody>
           <tr>
-            <td><%= attachment_image_tag @post, :image, :fill, 250, 200 %></td>
-            <td>
-            <table class="table">
-              <tbody>
-                <tr>
-                  <td>部位名</td>
-                  <td><%= @post.post_name %></td>
-                </tr>
-                <tr>
-                  <td>説明</td>
-                  <td><%= @post.post_introdction %></td>
-                </tr>
-                <tr>
-                  <td>松坂牛</td>
-                  <td><%= @post.max_price %></td>
-                </tr>
-                <tr>
-                  <td>牛角</td>
-                  <td><%= @post.min_price %>円</td>
-                </tr>
-                <tr>
-                  <td>スーパー</td>
-                  <td><%= @post.price %></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td><%= link_to '編集する', edit_admin_post_path(@post), class: "btn btn-success" %></td>
-                </tr>
-                </td>
-              </tr>
-              </tbody>
-            </table>
+            <th><%= attachment_image_tag @post, :image, :fill, 250, 200 %></th>
+            <th>
+              <table class="table table-borderless">
+                <tbody>
+                  <tr>
+                    <th>部位名　<%= @post.post_name %></th>
+                  </tr>
+                  <tr>
+                    <td>詳細　<%= @post.post_introdction %></td>
+                  </tr>
+                  <tr>
+                    <td>松坂牛　<%= @post.max_price %>円</td>
+                  </tr>
+                  <tr>
+                    <td>牛角　<%= @post.min_price %>円</td>
+                  </tr>
+                  <tr>
+                    <td>スーパー　<%= @post.price %>円</td>
+                  </tr>
+                  <tr>
+                    <td><%= link_to '編集する', edit_admin_post_path(@post), class: "btn btn-success" %></td>
+                  </tr>
+                  <tr>
+                    <td><%= link_to '削除する', admin_post_path(@post), method: :delete, data: { confirm: '削除しますか？'}, class: "btn btn-danger" %></td>
+                  </tr>
+                </tbody>
+              </table>
+            </th>
+          </tr>
         </tbody>
       </table>
     </div>

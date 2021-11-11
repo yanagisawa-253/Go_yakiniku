@@ -23,19 +23,22 @@ class Admin::PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
-    @post.update
-    redirect_to post_path(@post)
+    if @post.update(post_params)
+      redirect_to admin_post_path(@post)
+    else
+      render 'edit'
+    end
   end
 
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-    redirect_to posts_path
+    redirect_to admin_posts_path
   end
 
   private
 
   def post_params
-    params.require(:post).permit(:post_name, :post_introdction, :max_price, :min_price, :price)
+    params.require(:post).permit(:image, :post_name, :post_introdction, :max_price, :min_price, :price)
   end
 end
