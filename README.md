@@ -7,3 +7,6 @@
 
 #### 設計書
 テーブル設計書　https://docs.google.com/spreadsheets/d/1uwfFUbwwzwV1rBPB_BB7yEvOSizYjqKX8e-q5ZKfflQ/edit?usp=sharing
+
+管理者：admin@admin
+パスワード：111111
