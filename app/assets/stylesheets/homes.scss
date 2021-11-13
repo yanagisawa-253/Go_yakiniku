@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.top-row-2 {
+  background-color: #FFDBC9;
+}
+
 .top-image {
   // 画像をセンターに寄せるための命令
   text-align: center;
@@ -27,8 +31,13 @@
   height: auto;
   background-size: 100% auto;
   background-position: center;
+  border-radius: 15px;
 }
 
 .box-string {
   border-bottom: 5px solid orangered;
+}
+
+.post_box {
+  display: flex;
 }
